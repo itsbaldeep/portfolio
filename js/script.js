@@ -25,6 +25,9 @@ $(document).ready(function() {
     });
     
     const skillsTopOffset = $('.skills-section').offset().top;
+    const statsTopOffset = $('.stats-section').offset().top;
+    let counting = true;
+
     $(window).scroll(function() {
         if (window.pageYOffset > skillsTopOffset - $(window).height() + 200) {
             $('.chart').easyPieChart({
@@ -37,6 +40,12 @@ $(document).ready(function() {
                 onStep: function(from, to, percent) {
                     $(this.el).find('.percent').text(Math.round(percent));
                 }
+            });
+        }
+        if (counting && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
+            $('.counter').each(function() {
+                $(this).countup(parseInt($(this).text()));
+                counting = false;
             });
         }
     });

@@ -70,7 +70,8 @@ p.main {
     margin-left: 10%;
 }
 
-.skills-section {
+.skills-section,
+.contact-section {
     background-color: #e74c3c;
     color: #fff;
 }
@@ -107,4 +108,71 @@ p.main {
 
 .chart .percent:after {
     content: '%';
+}
+
+.square {
+    margin-top: 30px;
+    position: relative;
+}
+
+.square-container {
+    position: relative;
+    padding: 50px 15px 35px;
+    text-align: center;
+    border: 2px solid #444;
+    border-top: none;
+}
+
+.square-container:before,
+.square-container:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 30%;
+    border-bottom: 2px solid #444; 
+}
+
+.square-container:before {
+    left: 0;
+}
+
+.square-container:after {
+    right: 0;
+}
+
+.square h2 {
+    font-size: 56px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.square h3 {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.icon {
+    position: absolute;
+    left: 50%;
+    top: -20%;
+    width: 40%;
+    height: 60px;
+    font-size: 45px;    
+    margin-left: -20%;
+}
+
+.contact-button {
+    display: inline-block;
+    color: white;
+    margin-top: 25px;
+    padding: 15px 20px;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+.contact-button:hover {
+    color: #e74c3c;
+    background-color: white;
+    text-decoration: none;
 }
